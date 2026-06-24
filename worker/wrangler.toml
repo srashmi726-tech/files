@@ -1,0 +1,20 @@
+name = "rashmi-shree-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+[vars]
+APP_NAME = "Rashmi Shree API"
+
+# D1 SQLite database
+# Run: wrangler d1 create rashmi-shree-db
+# Then paste the resulting database_id below.
+[[d1_databases]]
+binding  = "DB"
+database_name = "rashmi-shree-db"
+database_id   = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# R2 bucket for product images
+# Run: wrangler r2 bucket create rashmi-shree-images
+[[r2_buckets]]
+binding     = "IMAGES"
+bucket_name = "rashmi-shree-images"
